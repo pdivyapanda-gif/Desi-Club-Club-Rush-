@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIHS Desi Club</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #faf7f5;
+      color: #5a5a5a;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: url('images/header.jpg') no-repeat center center/cover;
+      height: 380px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    }
+    
+    header h1 {
+      font-size: 2.8rem;
+      background: rgba(168, 123, 128, 0.75);
+      padding: 18px 28px;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    
+    h2 {
+      color: #a87b80;
+      margin-bottom: 25px;
+      text-align: center;
+      font-size: 1.9rem;
+      position: relative;
+      padding-bottom: 12px;
+      font-weight: 500;
+    }
+    
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #d4b8a0;
+      border-radius: 2px;
+    }
+    
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+      color: #666;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .leaders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      justify-items: center;
+    }
+    
+    .leader {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      text-align: center;
+      width: 220px;
+    }
+    
+    .leader:hover {
+      transform: translateY(-5px);
+    }
+    
+    .leader-img-container {
+      width: 150px;
+      height: 150px;
+      margin: 15px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 3px solid #d4b8a0;
+    }
+    
+    .leader-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .leader-info {
+      padding: 18px;
+    }
+    
+    .leader-info h3 {
+      color: #a87b80;
+      margin-bottom: 5px;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    
+    .leader-info p {
+      color: #888;
+      font-size: 1rem;
+    }
+    
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .video-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    
+    .video-item video {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-bottom: 3px solid #d4b8a0;
+    }
+    
+    .video-info {
+      padding: 15px;
+    }
+    
+    .video-info h3 {
+      color: #a87b80;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    
+    .video-info p {
+      color: #888;
+      font-size: 1rem;
+    }
+    
+    footer {
+      background: linear-gradient(to right, #a87b80, #d4b8a0);
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .footer-content p {
+      margin: 8px 0;
+      font-size: 1rem;
+      color: white;
+    }
+    
+    .footer-content a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .copyright {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .leaders, .videos {
+        grid-template-columns: 1fr;
+      }
+      
+      section {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RIHS Desi Club</h1>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to the RIHS Desi Club! Our mission is to celebrate and share South Asian culture with our school community through events, food, music, and traditions.</p>
+    <p>Join us for our meetings where we plan events, share stories, and enjoy traditional snacks together!</p>
+  </section>
+
+  <section id="leaders">
+    <h2>Club Leaders</h2>
+    <div class="leaders">
+      <div class="leader">
+        <div class="leader-img-container">
+          <img src="images/divya.jpg" alt="Divya Panda">
+        </div>
+        <div class="leader-info">
+          <h3>Divya Panda</h3>
+          <p>President</p>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="leader-img-container">
+          <img src="images/advithi.jpg" alt="Advithi Motakatla">
+        </div>
+        <div class="leader-info">
+          <h3>Advithi Motakatla</h3>
+          <p>Vice President</p>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="leader-img-container">
+          <img src="images/shrika.jpg" alt="Shrika Muddey">
+        </div>
+        <div class="leader-info">
+          <h3>Shrika Muddey</h3>
+          <p>Secretary</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Videos</h2>
+    <p>Watch highlights from our Multicultural Week events!</p>
+    <div class="videos">
+      <div class="video-item">
+        <video controls poster="images/video1.jpg">
+          <source src="videos/event1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <h3>From our first Multicultural Week</h3>
+          <p>Highlights from our inaugural cultural celebration</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls poster="images/video2.jpg">
+          <source src="videos/event2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <h3>Our most recent Multicultural Week</h3>
+          <p>Highlights from our latest cultural celebration</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>Contact us: <a href="mailto:21628@riacademies.net">21628@riacademies.net</a></p>
+      <p>Phone: 209-302-2544</p>
+      <div class="copyright">
+        <p>Made by Divya Panda &lt;3</p>
+        <p>2025 RIHS Desi Club</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
